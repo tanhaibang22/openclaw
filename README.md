@@ -31,6 +31,28 @@ This repository contains the configuration, skills, and memory files for an Open
 - **Branch**: `main`
 - **Initial Commit**: `e4d3777` - Initial commit: OpenClaw workspace configuration
 
+## Auto-Commit System
+
+This workspace includes an automatic commit and push system:
+
+### Scripts
+- `scripts/auto-commit.sh` - Automatically detects changes, commits, and pushes
+- `.git/hooks/post-commit` - Auto-push hook that runs after every commit
+
+### Scheduled Tasks
+1. **Hourly Check** - Runs every hour to check for changes
+2. **Daily Backup** - Runs at 22:00 (10 PM) China time for daily summary
+
+### What Gets Auto-Committed
+- Updates to `MEMORY.md` or files in `memory/` directory
+- Changes to core configuration files (`AGENTS.md`, `SOUL.md`, `USER.md`, etc.)
+- Added or modified skill files
+- Other important workspace changes
+
+### Logs
+- `memory/git-auto-commit.log` - Script execution logs
+- `memory/git-hooks.log` - Git hook execution logs
+
 ## Usage
 
 This workspace is managed by OpenClaw AI assistant. The assistant will:
